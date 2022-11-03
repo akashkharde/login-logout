@@ -1,0 +1,14 @@
+.footer{
+    background-color: black;
+    width: 100%; 
+    bottom: 0%;
+    margin-top: 280px;
+}
+.con{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
