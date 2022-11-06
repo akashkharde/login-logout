@@ -24,8 +24,7 @@ function Home() {
         <div className="row my-3">
           {
             posts.map((post) => {
-
-              return <div className="col-md-4 " key={post.id} > 
+              return <div className="col-md-3 " key={post.id} > 
               <AlbumCard title={post.title ? post.title : ""} albumId={post.albumId ? post.albumId : ""} id={post.id ? post.id : ""} imgUrl={post.urlToImage} />
               </div>
             })

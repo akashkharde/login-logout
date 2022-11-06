@@ -16,16 +16,17 @@ function ContactUs() {
   return (
 
     <div className='container'>
+      <div style={{justifyContent: 'center' , textAlign:'center'}}>
+      <h1>Hello {' ' + myname}</h1>
+              <h2>Contact us</h2>
+      </div>
 
       
         <section id="cover" className="min-vh-100">
           <div id="cover-caption">
             <div className="container">
-              <h1>Hello {' ' + myname}</h1>
-              <h2>Contact us</h2>
               <div className="row text-white">
                 <div className="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form ">
-
                   <div>
                     <form  className="justify-content-center">
                       <div className="form-group">

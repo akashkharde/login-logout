@@ -14,8 +14,11 @@ import ContactUs from './Component/ContactUs';
 import Footer from './Component/Footer';
 
 function App() {
+
   return (
-    <div className="App">
+
+    <div className="page-container">
+      <div className='content-wrap '>     
       <BrowserRouter>
       <Routes>
         <Route path = '/' element = { <Register/> }/>
@@ -24,10 +27,9 @@ function App() {
         <Route path = '/profile' element = {<div> <Header/> <Profile/></div>  }/>
         <Route path = '/contactUs' element = {<div> <Header/> <ContactUs/></div>  }/>
       </Routes>
-      {/* <Footer/> */}
       </BrowserRouter>
-     
-     
+      </div>
+     <Footer/>
     </div>
   );
 }

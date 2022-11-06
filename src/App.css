@@ -2,13 +2,12 @@
   text-align: center;
 }
 
-/* .page-con{
-  display: flex;
-  flex-direction: column;
+.page-container{
   min-height: 100vh;
 }
 .content-wrap{
   flex: 1;
-} */
+  min-height: 100vh;
+}
 
 

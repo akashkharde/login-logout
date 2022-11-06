@@ -18,7 +18,7 @@ function AlbumCard(props) {
                 <p>ID {id}</p>
               <img src={!imgUrl ? "https://via.placeholder.com/600/e9603b" : imgUrl} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+                    <p className="card-title">{title}</p>
                 </div>
             </div>
         </div>
