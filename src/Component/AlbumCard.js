@@ -11,18 +11,20 @@ function AlbumCard(props) {
 
     return (
 
+
         <div>
-        <div className="my-3" >
-            <div className='container'>
-                <p>Album ID {albumId}</p>
-                <p>ID {id}</p>
-              <img src={!imgUrl ? "https://via.placeholder.com/600/e9603b" : imgUrl} className="card-img-top" alt="..." />
-                <div className="card-body">
+            <div className='container' style={{backgroundColor: 'white'}}>
+               <div className='span'>
+               <span>Album ID {albumId}</span>
+                <span>ID {id}</span>
+               </div>
+              <img src={!imgUrl ? "https://via.placeholder.com/600/e9603b" : imgUrl} className="card-img-top albumimg" alt="..." />
+                <div className="">
                     <p className="card-title">{title}</p>
                 </div>
             </div>
         </div>
-    </div>
+
     )
 }
 

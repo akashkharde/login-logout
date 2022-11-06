@@ -11,48 +11,24 @@ function ContactUs() {
         alert("your msg send succesfully")
       }
     </>
+    console.log('Your msg', massageClick)
   }
 
   return (
-
-    <div className='container'>
-      <div style={{justifyContent: 'center' , textAlign:'center'}}>
-      <h1>Hello {' ' + myname}</h1>
-              <h2>Contact us</h2>
+    <div className='ContactUs'>
+      <div className='contact_con'>
+        <h1>Contact US</h1>
+        <form>
+        <h5>Name :</h5>
+          <input type='mail' placeholder='Enter your Email' value={myname} required />
+          <h5>Email :</h5>
+          <input type='mail' placeholder='Enter your Email' value={myEmail} required />
+          <h5>Massage</h5>
+          <textarea className='row3' placeholder='Write your Massage '></textarea>
+          <button type='submit'  onClick={massageClick}  className='loginsignbtn'>Contact Us</button>
+        </form>
       </div>
-
-      
-        <section id="cover" className="min-vh-100">
-          <div id="cover-caption">
-            <div className="container">
-              <div className="row text-white">
-                <div className="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form ">
-                  <div>
-                    <form  className="justify-content-center">
-                      <div className="form-group">
-                        <label >Name</label>
-                        <input type='name' className='form-control' value={myname} required />
-                      </div>
-                      <div className="form-group">
-                        <label className="sr-only">Email</label>
-                        <input type='Email' className='form-control' placeholder='Enter your name' value={myEmail} required />
-                      </div>
-                      <div className="form-group">
-                        <label for="exampleFormControlTextarea1" placeholder='Enter Your msg' >Enter Your Massage</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3">
-
-                        </textarea>
-                      </div> <br/>
-                      <button className='btn btn-primary' onClick={massageClick} type='submit'>Contact Us</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
     </div>
-
   )
 }
 

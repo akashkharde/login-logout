@@ -14,22 +14,24 @@ import ContactUs from './Component/ContactUs';
 import Footer from './Component/Footer';
 
 function App() {
+  const pageSize = 8;
 
   return (
 
-    <div className="page-container">
-      <div className='content-wrap '>     
+    <div className='app_con' >
+         
       <BrowserRouter>
       <Routes>
         <Route path = '/' element = { <Register/> }/>
         <Route path = '/login' element = { <Login/>}/>
-        <Route path = '/home' element = {<div> <Header/> <Home/></div>  }/>
+        <Route path = '/home' element = {<div> <Header/> <Home pageSize={pageSize} /></div>  }/>
         <Route path = '/profile' element = {<div> <Header/> <Profile/></div>  }/>
-        <Route path = '/contactUs' element = {<div> <Header/> <ContactUs/></div>  }/>
+        <Route path = '/contactUs' element = {<div> <Header/> <ContactUs/> </div>  }/>
       </Routes>
       </BrowserRouter>
+      <div>
+      {/* <Footer/> */}
       </div>
-     <Footer/>
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import React from 'react'
+
+
 import '../css/Footer.css'
 
 function Footer() {
@@ -10,7 +11,7 @@ function Footer() {
         <h4>Practical Task</h4>
       </div>
       <div className='left'>
-      <h2> watch</h2>
+      <h2> Watch</h2>
       <h2>Akash </h2>
       </div>
 

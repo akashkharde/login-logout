@@ -1,46 +1,51 @@
-
-.ContactUs{
+.register{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+    background-position: center;
 
-    
 }
 
-.contact_con{
+.register_con{
     align-items: center;
     width: 400px;
     height: fit-content;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid lightgray;
     padding: 20px;
     background-color: white;
+    margin-top: 40px;
+    
 }
 
-.contact_con > h1 {
+.register_con > h1 {
     font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
 }
-.contact_con > form >h5 {
+.register_con > form >h5 {
     margin-bottom: 5px;
     font-weight: 500;
 }
-.contact_con > form > input {
+.register_con >form > input {
     height: 30px;
     margin-bottom: 10px;
     background-color: white;
     width: 98%;
 }
 
-.contact_con > form > textarea {
-    height: 30px;
+.register_para {
+    margin-top: 10px;
+    font-size: 15px;
     margin-bottom: 10px;
-    background-color: white;
-    width: 98%;    
+    text-align: center;
 }
-
 .loginsignbtn {
     background-color: #f0c14b;
     border-radius: 2px;

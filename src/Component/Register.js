@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import Login from './Login';
+import '../css/Register.css'
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
     const [cheak, setCheak] = useState(false);
-    const [login, setLogin] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,67 +24,37 @@ function Register() {
             localStorage.setItem("UserName", JSON.stringify(username))
             localStorage.setItem("Phone", JSON.stringify(phone))
             console.log('saved')
-
-            setLogin(!login)
+            navigate('/login');
         }
     }
 
     const handleClick = () => {
-        setLogin(!login);
+        navigate('/login');
+
     }
 
-
     return (
-        <div className='container my-3' style={{border: '1px solid black',}}  >
 
-            {login ? (
-                <form  onSubmit={handleSubmit} >
-                    <h1>Register</h1>
-
-
-                    <div className="row text-white col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form " >
-                        <div className=" text-center form ">
-                            <div>
-
-                                <div  className="justify-content-center">
-                                    <div className='form-group'>
-                                        <label> Full Name</label>
-                                        <input for='name' type='name' className='form-control' placeholder='Enter your name' onChange={(e) => setName(e.target.value)} required />
-                                    </div>
-                                    <div className='form-group'>
-                                        <label>Username</label>
-                                        <input type='name' className='form-control' placeholder='Enter your Username' onChange={(e) => setUsername(e.target.value)} required />
-                                    </div>
-                                    <div className='form-group'>
-                                        <label>Email</label>
-                                        <input for='email' type='email' className='form-control' placeholder='Enter your Email' onChange={(e) => setEmail(e.target.value)} required />
-                                    </div>
-                                    <div className='form-group'>
-                                        <label>Password </label>
-                                        <input type='password' className='form-control' placeholder='Enter your Password ' onChange={(e) => setPassword(e.target.value)} required />
-                                    </div>
-                                    <div className='form-group'>
-                                        <label>Mobile No</label>
-                                        <input for='phone' type='number' className='form-control' placeholder='Enter your Mobile No' onChange={(e) => setPhone(e.target.value)} required />
-                                    </div>
-                                    <br />
-                                   
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <button type='submit' className='btn btn-dark '>Register</button>
-                                    <p onClick={handleClick}>Alredy Register Login in?</p>
-
+        <div className='register'>
+            <div className='register_con'>
+                <h1>Register</h1>
+                <form onSubmit={handleSubmit} >
+                    <h5>Full Name :</h5>
+                    <input type='name' placeholder='Enter your Full Name' onChange={(e) => setName(e.target.value)} required />
+                    <h5>Username :</h5>
+                    <input type='name' placeholder='Enter your username' onChange={(e) => setUsername(e.target.value)} required />
+                    <h5>Email :</h5>
+                    <input type='Email' placeholder='Enter your Email' onChange={(e) => setEmail(e.target.value)} required />
+                    <h5>Password</h5>
+                    <input type='password' placeholder='Enter your password' onChange={(e) => setPassword(e.target.value)} required />
+                    <h5>contact No :</h5>
+                    <input type='number' placeholder='Enter your phone no' onChange={(e) => setPhone(e.target.value)} required />
+                    <button type='submit' className='loginsignbtn'>Register</button>
+                    <p onClick={handleClick} className="register_para" >Alredy Register Login in?</p>
                 </form>
-            ) : (
-
-                <Login />
-            )}
-
+            </div>
         </div>
+
     )
 }
 
